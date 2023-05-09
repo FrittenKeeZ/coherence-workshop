@@ -1,8 +1,10 @@
 using UnityEngine;
+using Coherence.Toolkit;
 
 public class Move : MonoBehaviour
 {
     public Animator animator;
+    public CoherenceSync sync;
 
     [field: Header("Inputs")]
     public Vector3 MoveInput { get; set; }
@@ -216,6 +218,7 @@ public class Move : MonoBehaviour
         if (_isGrounded)
         {
             animator.SetTrigger("Jump");
+            sync.SendCommand<Animator>(nameof(Animator.SetTrigger), Coherence.MessageTarget.Other, "Jump");
         }
         _jumpTimer = jumpLength;
         

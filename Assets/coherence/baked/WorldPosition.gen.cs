@@ -79,7 +79,7 @@ namespace Coherence.Generated
 			}
 			return (val, mask, null);
 		}
-		public static (WorldPosition, uint, uint?) DeserializeArchetypeMatchLogic_a7235b6ccbcda4f3eafed3e92664731f_WorldPosition_LOD0(InProtocolBitStream bitStream)
+		public static (WorldPosition, uint, uint?) DeserializeArchetypePlayer_9170ac915b1f24a41a5f1ba25c4e50fc_WorldPosition_LOD0(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
 			var val = new WorldPosition();

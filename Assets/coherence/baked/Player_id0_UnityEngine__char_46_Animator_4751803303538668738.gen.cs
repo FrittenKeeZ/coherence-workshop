@@ -15,16 +15,17 @@ namespace Coherence.Generated
 	using Coherence.Toolkit;
 	using UnityEngine;
 
-	public struct WorldOrientation : ICoherenceComponentData
+	public struct Player_id0_UnityEngine__char_46_Animator_4751803303538668738 : ICoherenceComponentData
 	{
-		public Quaternion value;
+		public float MoveSpeed;
+		public bool Grounded;
 
 		public override string ToString()
 		{
-			return $"WorldOrientation(value: {value})";
+			return $"Player_id0_UnityEngine__char_46_Animator_4751803303538668738(MoveSpeed: {MoveSpeed}, Grounded: {Grounded})";
 		}
 
-		public uint GetComponentType() => Definition.InternalWorldOrientation;
+		public uint GetComponentType() => Definition.InternalPlayer_id0_UnityEngine__char_46_Animator_4751803303538668738;
 
 		public const int order = 0;
 
@@ -42,11 +43,17 @@ namespace Coherence.Generated
 
 		public ICoherenceComponentData MergeWith(ICoherenceComponentData data, uint mask)
 		{
-			var other = (WorldOrientation)data;
+			var other = (Player_id0_UnityEngine__char_46_Animator_4751803303538668738)data;
 			if ((mask & 0x01) != 0)
 			{
 				Frame = other.Frame;
-				value = other.value;
+				MoveSpeed = other.MoveSpeed;
+			}
+			mask >>= 1;
+			if ((mask & 0x01) != 0)
+			{
+				Frame = other.Frame;
+				Grounded = other.Grounded;
 			}
 			mask >>= 1;
 			return this;
@@ -58,35 +65,50 @@ namespace Coherence.Generated
 
 		}
 
-		public static void Serialize(WorldOrientation data, uint mask, IOutProtocolBitStream bitStream)
+		public static void Serialize(Player_id0_UnityEngine__char_46_Animator_4751803303538668738 data, uint mask, IOutProtocolBitStream bitStream)
 		{
 			if (bitStream.WriteMask((mask & 0x01) != 0))
 			{
-				bitStream.WriteQuaternion((data.value.ToCoreQuaternion()), 32);
+				bitStream.WriteFloat(data.MoveSpeed, FloatMeta.NoCompression());
+			}
+			mask >>= 1;
+			if (bitStream.WriteMask((mask & 0x01) != 0))
+			{
+				bitStream.WriteBool(data.Grounded);
 			}
 			mask >>= 1;
 		}
 
-		public static (WorldOrientation, uint, uint?) Deserialize(InProtocolBitStream bitStream)
+		public static (Player_id0_UnityEngine__char_46_Animator_4751803303538668738, uint, uint?) Deserialize(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
-			var val = new WorldOrientation();
+			var val = new Player_id0_UnityEngine__char_46_Animator_4751803303538668738();
 	
 			if (bitStream.ReadMask())
 			{
-				val.value = (bitStream.ReadQuaternion(32)).ToUnityQuaternion();
+				val.MoveSpeed = bitStream.ReadFloat(FloatMeta.NoCompression());
 				mask |= 0b00000000000000000000000000000001;
+			}
+			if (bitStream.ReadMask())
+			{
+				val.Grounded = bitStream.ReadBool();
+				mask |= 0b00000000000000000000000000000010;
 			}
 			return (val, mask, null);
 		}
-		public static (WorldOrientation, uint, uint?) DeserializeArchetypePlayer_9170ac915b1f24a41a5f1ba25c4e50fc_WorldOrientation_LOD0(InProtocolBitStream bitStream)
+		public static (Player_id0_UnityEngine__char_46_Animator_4751803303538668738, uint, uint?) DeserializeArchetypePlayer_9170ac915b1f24a41a5f1ba25c4e50fc_Player_id0_UnityEngine__char_46_Animator_4751803303538668738_LOD0(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;
-			var val = new WorldOrientation();
+			var val = new Player_id0_UnityEngine__char_46_Animator_4751803303538668738();
 			if (bitStream.ReadMask())
 			{
-				val.value = (bitStream.ReadQuaternion(32)).ToUnityQuaternion();
+				val.MoveSpeed = bitStream.ReadFloat(FloatMeta.NoCompression());
 				mask |= 0b00000000000000000000000000000001;
+			}
+			if (bitStream.ReadMask())
+			{
+				val.Grounded = bitStream.ReadBool();
+				mask |= 0b00000000000000000000000000000010;
 			}
 
 			return (val, mask, 0);
@@ -101,7 +123,7 @@ namespace Coherence.Generated
 		/// </summary>
 		public void ResetByteArrays(ICoherenceComponentData lastSent, uint mask)
 		{
-			var last = lastSent as WorldOrientation?;
+			var last = lastSent as Player_id0_UnityEngine__char_46_Animator_4751803303538668738?;
 	
 		}
 	}

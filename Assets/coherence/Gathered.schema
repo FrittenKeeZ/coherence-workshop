@@ -1,5 +1,17 @@
-archetype MatchLogic_a7235b6ccbcda4f3eafed3e92664731f
+component Player_id0_UnityEngine__char_46_Animator_4751803303538668738
+  MoveSpeed Float [compression "None"]
+  Grounded Bool [bits "1"]
+
+command Player_id0_UnityEngine__char_46_Animator__char_46_SetTrigger_be5c5f98_c2c7_4c78_8153_710be3d019d1 [routing "All"]
+  name String 
+
+archetype Player_9170ac915b1f24a41a5f1ba25c4e50fc
   lod 0
     WorldPosition 
       value [compression "None"]
+    WorldOrientation 
+      value [bits "32"]
+    Player_id0_UnityEngine__char_46_Animator_4751803303538668738 
+      number [compression "None"]
+      number [bits "1"]
 

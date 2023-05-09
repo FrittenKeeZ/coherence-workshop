@@ -16,7 +16,7 @@ namespace Coherence.Generated
 
 	public class Definition : IDefinition
 	{
-		public const string schemaId = "212f3e9b52328d6088e73b936428c29c52d0f7b0";
+		public const string schemaId = "deb64ebe5492aad05ab23031b934b7d0cb3b7f5f";
 		public const uint InternalWorldPosition = 0;
 		public const uint InternalWorldOrientation = 1;
 		public const uint InternalLocalUser = 2;
@@ -119,13 +119,17 @@ namespace Coherence.Generated
 		public const uint InternalGenericFieldULong3 = 99;
 		public const uint InternalGenericFieldColor0 = 100;
 		public const uint InternalGenericFieldColor1 = 101;
-		public const uint InternalArchetypeMatchLogic_a7235b6ccbcda4f3eafed3e92664731f_WorldPosition_LOD0 = 102;
+		public const uint InternalPlayer_id0_UnityEngine__char_46_Animator_4751803303538668738 = 102;
+		public const uint InternalArchetypePlayer_9170ac915b1f24a41a5f1ba25c4e50fc_WorldPosition_LOD0 = 103;
+		public const uint InternalArchetypePlayer_9170ac915b1f24a41a5f1ba25c4e50fc_WorldOrientation_LOD0 = 104;
+		public const uint InternalArchetypePlayer_9170ac915b1f24a41a5f1ba25c4e50fc_Player_id0_UnityEngine__char_46_Animator_4751803303538668738_LOD0 = 105;
 		public const uint InternalAuthorityRequest = 0;
 		public const uint InternalAuthorityTransfer = 1;
 		public const uint InternalQuerySynced = 2;
 		public const uint InternalAdoptOrphan = 3;
 		public const uint InternalPersistenceReady = 4;
 		public const uint InternalGenericCommand = 5;
+		public const uint InternalPlayer_id0_UnityEngine__char_46_Animator__char_46_SetTrigger_be5c5f98_c2c7_4c78_8153_710be3d019d1 = 6;
 
 		private static readonly Dictionary<uint, string> componentNamesForTypeIds = new Dictionary<uint, string>() {
 			{ 0, "WorldPosition" },
@@ -230,7 +234,10 @@ namespace Coherence.Generated
 			{ 99, "GenericFieldULong3" },
 			{ 100, "GenericFieldColor0" },
 			{ 101, "GenericFieldColor1" },
-			{ 102, "ArchetypeMatchLogic_a7235b6ccbcda4f3eafed3e92664731f_WorldPosition_LOD0" },
+			{ 102, "Player_id0_UnityEngine__char_46_Animator_4751803303538668738" },
+			{ 103, "ArchetypePlayer_9170ac915b1f24a41a5f1ba25c4e50fc_WorldPosition_LOD0" },
+			{ 104, "ArchetypePlayer_9170ac915b1f24a41a5f1ba25c4e50fc_WorldOrientation_LOD0" },
+			{ 105, "ArchetypePlayer_9170ac915b1f24a41a5f1ba25c4e50fc_Player_id0_UnityEngine__char_46_Animator_4751803303538668738_LOD0" },
 		};
 
 		public static string ComponentNameForTypeId(uint typeId)
@@ -456,8 +463,14 @@ namespace Coherence.Generated
 					return GenericFieldColor0.Deserialize(inProtocolStream);
 				case InternalGenericFieldColor1:
 					return GenericFieldColor1.Deserialize(inProtocolStream);
-				case InternalArchetypeMatchLogic_a7235b6ccbcda4f3eafed3e92664731f_WorldPosition_LOD0:
-					return WorldPosition.DeserializeArchetypeMatchLogic_a7235b6ccbcda4f3eafed3e92664731f_WorldPosition_LOD0(inProtocolStream);
+				case InternalPlayer_id0_UnityEngine__char_46_Animator_4751803303538668738:
+					return Player_id0_UnityEngine__char_46_Animator_4751803303538668738.Deserialize(inProtocolStream);
+				case InternalArchetypePlayer_9170ac915b1f24a41a5f1ba25c4e50fc_WorldPosition_LOD0:
+					return WorldPosition.DeserializeArchetypePlayer_9170ac915b1f24a41a5f1ba25c4e50fc_WorldPosition_LOD0(inProtocolStream);
+				case InternalArchetypePlayer_9170ac915b1f24a41a5f1ba25c4e50fc_WorldOrientation_LOD0:
+					return WorldOrientation.DeserializeArchetypePlayer_9170ac915b1f24a41a5f1ba25c4e50fc_WorldOrientation_LOD0(inProtocolStream);
+				case InternalArchetypePlayer_9170ac915b1f24a41a5f1ba25c4e50fc_Player_id0_UnityEngine__char_46_Animator_4751803303538668738_LOD0:
+					return Player_id0_UnityEngine__char_46_Animator_4751803303538668738.DeserializeArchetypePlayer_9170ac915b1f24a41a5f1ba25c4e50fc_Player_id0_UnityEngine__char_46_Animator_4751803303538668738_LOD0(inProtocolStream);
 				default:
 					return (null, 0, 0);
 			}
@@ -774,6 +787,9 @@ namespace Coherence.Generated
 				case InternalGenericFieldColor1:
 					GenericFieldColor1.Serialize((GenericFieldColor1)data, mask, protocolStream);
 					break;
+				case InternalPlayer_id0_UnityEngine__char_46_Animator_4751803303538668738:
+					Player_id0_UnityEngine__char_46_Animator_4751803303538668738.Serialize((Player_id0_UnityEngine__char_46_Animator_4751803303538668738)data, mask, protocolStream);
+					break;
 			}
 		}
 
@@ -793,6 +809,8 @@ namespace Coherence.Generated
 					return PersistenceReady.Deserialize(bitStream);
 				case Definition.InternalGenericCommand:
 					return GenericCommand.Deserialize(bitStream);
+				case Definition.InternalPlayer_id0_UnityEngine__char_46_Animator__char_46_SetTrigger_be5c5f98_c2c7_4c78_8153_710be3d019d1:
+					return Player_id0_UnityEngine__char_46_Animator__char_46_SetTrigger_be5c5f98_c2c7_4c78_8153_710be3d019d1.Deserialize(bitStream);
 				default:
 					break;
 			}
@@ -871,6 +889,9 @@ namespace Coherence.Generated
 					break;
 				case Definition.InternalGenericCommand:
 					GenericCommand.Serialize((GenericCommand)data, bitStream);
+					break;
+				case Definition.InternalPlayer_id0_UnityEngine__char_46_Animator__char_46_SetTrigger_be5c5f98_c2c7_4c78_8153_710be3d019d1:
+					Player_id0_UnityEngine__char_46_Animator__char_46_SetTrigger_be5c5f98_c2c7_4c78_8153_710be3d019d1.Serialize((Player_id0_UnityEngine__char_46_Animator__char_46_SetTrigger_be5c5f98_c2c7_4c78_8153_710be3d019d1)data, bitStream);
 					break;
 				default:
 					break;
