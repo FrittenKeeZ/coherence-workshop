@@ -79,6 +79,42 @@ namespace Coherence.Generated
 			}
 			return (val, mask, null);
 		}
+		public static (WorldOrientation, uint, uint?) DeserializeArchetypeFierySkull_7e8ca0c36c0244afc9fbb5c24fee5f8d_WorldOrientation_LOD0(InProtocolBitStream bitStream)
+		{
+			var mask = (uint)0;
+			var val = new WorldOrientation();
+			if (bitStream.ReadMask())
+			{
+				val.value = (bitStream.ReadQuaternion(32)).ToUnityQuaternion();
+				mask |= 0b00000000000000000000000000000001;
+			}
+
+			return (val, mask, 0);
+		}
+		public static (WorldOrientation, uint, uint?) DeserializeArchetypeFireball_677cc6adb825e4f698f676c7c8341d73_WorldOrientation_LOD0(InProtocolBitStream bitStream)
+		{
+			var mask = (uint)0;
+			var val = new WorldOrientation();
+			if (bitStream.ReadMask())
+			{
+				val.value = (bitStream.ReadQuaternion(32)).ToUnityQuaternion();
+				mask |= 0b00000000000000000000000000000001;
+			}
+
+			return (val, mask, 0);
+		}
+		public static (WorldOrientation, uint, uint?) DeserializeArchetypeFlyingSkull_231416ec400cc4773a6f82624f7cacb2_WorldOrientation_LOD0(InProtocolBitStream bitStream)
+		{
+			var mask = (uint)0;
+			var val = new WorldOrientation();
+			if (bitStream.ReadMask())
+			{
+				val.value = (bitStream.ReadQuaternion(32)).ToUnityQuaternion();
+				mask |= 0b00000000000000000000000000000001;
+			}
+
+			return (val, mask, 0);
+		}
 		public static (WorldOrientation, uint, uint?) DeserializeArchetypePlayer_9170ac915b1f24a41a5f1ba25c4e50fc_WorldOrientation_LOD0(InProtocolBitStream bitStream)
 		{
 			var mask = (uint)0;

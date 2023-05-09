@@ -10,10 +10,19 @@ namespace Coherence.Generated
 
 	public static class Archetypes
 	{
-		public const int Player_9170ac915b1f24a41a5f1ba25c4e50fcIndex = 0;
+		public const int FierySkull_7e8ca0c36c0244afc9fbb5c24fee5f8dIndex = 0;
+		public const int Fireball_677cc6adb825e4f698f676c7c8341d73Index = 1;
+		public const int FlyingSkull_231416ec400cc4773a6f82624f7cacb2Index = 2;
+		public const int Player_9170ac915b1f24a41a5f1ba25c4e50fcIndex = 3;
 
 		public static Dictionary<string, int> IndexForName = new Dictionary<string, int>() {
-			{ "Player_9170ac915b1f24a41a5f1ba25c4e50fc", 0 },
+			{ "FierySkull_7e8ca0c36c0244afc9fbb5c24fee5f8d", 0 },
+
+			{ "Fireball_677cc6adb825e4f698f676c7c8341d73", 1 },
+
+			{ "FlyingSkull_231416ec400cc4773a6f82624f7cacb2", 2 },
+
+			{ "Player_9170ac915b1f24a41a5f1ba25c4e50fc", 3 },
 
 		};
 	}

@@ -5,6 +5,27 @@ component Player_id0_UnityEngine__char_46_Animator_4751803303538668738
 command Player_id0_UnityEngine__char_46_Animator__char_46_SetTrigger_be5c5f98_c2c7_4c78_8153_710be3d019d1 [routing "All"]
   name String 
 
+archetype FierySkull_7e8ca0c36c0244afc9fbb5c24fee5f8d
+  lod 0
+    WorldPosition 
+      value [compression "None"]
+    WorldOrientation 
+      value [bits "32"]
+
+archetype Fireball_677cc6adb825e4f698f676c7c8341d73
+  lod 0
+    WorldPosition 
+      value [compression "None"]
+    WorldOrientation 
+      value [bits "32"]
+
+archetype FlyingSkull_231416ec400cc4773a6f82624f7cacb2
+  lod 0
+    WorldPosition 
+      value [compression "None"]
+    WorldOrientation 
+      value [bits "32"]
+
 archetype Player_9170ac915b1f24a41a5f1ba25c4e50fc
   lod 0
     WorldPosition 
